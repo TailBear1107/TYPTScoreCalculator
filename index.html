@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TYPT Score Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./mainstyle.css"><!-- 引入主要css檔案 -->
+    <script src="./script.js" defer="defer"></script>
+    <style>
+        input.input {
+            display: inline-block;
+            width:400px;
+            height:36px;
+            line-height:20px;
+            font-size:20px;
+        }
+        #inputnum {
+            justify-content: center;
+            text-align: center;
+            line-height:20px;
+            font-size:20px;
+        }
+        #out {
+            justify-content: center;
+            text-align: center;
+            font-size:30px;
+            font-weight: bold;
+        }
+        #cal {
+            width:120px;
+            height:40px;
+            border:2px none;
+            background-color:rgb(62,230,81);
+            border-radius: 5px; 
+            color: white; 
+            font-size: 17px; 
+            font-weight: bold;
+        }
+        #cal:hover {
+            background-color:rgb(62,230,150);
+            cursor: pointer;/* 移到按鈕上換成點擊的游標圖示 */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="topbar">
+            <li><a class="title" href="javascript:window.location.reload()" title="Reload this page">TYPT Score Calculator</a></li>
+            <li><a href="https://github.com/TailBear1107/TYPTScoreCalculator" title="Github repositories" target="_blank">Github</a></li>
+        </ul>    
+    </nav>
+    <div id="inputnum">
+        <div id = "inrep">
+            <label>Rep (5~7 numbers space-separated):</label>
+            <input class="input" type="text" id="rep" >
+        </div>
+        <div id = "inopp">
+            <label>Opp (5~7 numbers space-separated):</label>
+            <input class="input" type="text" id="opp">
+        </div>
+        <div id = "inrev">
+            <label>Rev (5~7 numbers space-separated):</label>
+            <input class="input" type="text" id="rev">
+        </div>
+        </br>
+        <button id="cal" onclick="calculateScore()" title="Calculate">Calculate</button>
+    </div>
+    </br>
+    <div id="out">
+    Score: <span id="score">0</span>
+    </div>    
+</body></html>
